@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.2;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+.container {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url('image/festival.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 90%;
+    margin-left: auto;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    width: 400px;
+}
+
+.left h2 {
+    word-spacing: 0.2em;
+    letter-spacing: 0.35em;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.left h1 {
+    font-size: 50px;
+    margin-top:35px;
+    font-weight: 600;
+}
+
+
+/*Startin Blur*/
+.wrap-media {
+    padding: 10px 20px 20px 0;
+    width: 60%;
+    text-align: center;
+/*    background-color: rgba(155,155,155,0.6);*/
+    margin-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*
+How to make background blur 
+without contets on it
+*/
+.blur {
+    width: 100%;
+    height: 100%;
+/*
+    background: url('image/festival.jpeg');
+    background-size: 70%;
+    background-position: top;
+*/
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    left: 0;
+    top:0;
+/*    filter: blur(5px);*/
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    width:82.5%;
+    margin-left: auto;
+}
+
+.media audio {
+    width: 100%;
+    z-index: 1000;
+}
+
+.media p {
+    text-align: left;
+    font-weight: 100;
+    font-size: 10px;
+    word-spacing: 0.8em;
+    letter-spacing: 0.5em;
+    padding: 0;
+    margin-top:0;
+    color: #fff;
+    width:82.5%;
+    margin-left: auto;
+    z-index: 9999;
+}
+
+
+
+.search {
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+}
+
+.search i {
+    font-size: 20px;
+    margin-right: 5px;
+    transform: rotate(90deg);
+}
+
+.search span {
+    font-weight: bold;
+}
+
+.search form {
+    display: inline;
+}
+
+.search input {
+    display: none;
+    width: 130px;
+    height:25px;
+    border: 0;
+}
+
+#label:hover input, .search input:focus {
+    display: inline-block;
+    outline: 0;
+    border-radius: 2px;
+    border: 1px solid #d35400;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    float: left;
+    padding:0 10px;
+    color: #888;
+}
+
+li a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+}
+
+footer {
+    width:100%;
+    position: relative;
+    height: 15vh;
+}
+
+footer nav {
+    width:82%;
+    margin-left: auto;
+    padding-top:40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-nav li {
+    font-size:11px;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    border-right: 2px solid #999;
+    padding-right:15px;
+    padding-left: 15px;
+}
+
+.left-nav .not {
+    border-right: none;
+}
+
+.left-nav li::first-letter {
+    font-size: 13px;
+}
+
+.right-nav {
+    padding-right: 20px;
+}
+
+
+.right-nav li {
+    padding-right:8px;
+}
+
+.right-nav a {
+    color: #999;
+    font-size: 20px;
+    transition-duration: 300ms;
+}
+
+/*Hover effect*/
+#cloud:hover {
+    color: #ff7700;
+    transition-duration: 300ms;
+}
+#facebook:hover {
+    color:#3b5998;
+    transition-duration: 300ms;
+}
+#spotify:hover {
+    color: #1ed760;
+    transition-duration: 300ms;
+}
+#twitter:hover {
+    color: #1da1f2;
+    transition-duration: 300ms;
+}
+
+
+@media all and (max-width:550px) {
+    
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .left {
+        width: 100%;
+    }
+    
+    .left h1 {
+        font-size: 35px;
+    }
+    
+    .search {
+        float: none;
+    }
+    
+    .wrap-media {
+        width:100%;
+        padding-right: 0;
+    }
+    
+    .media  {
+        margin: auto;
+    }
+    
+    footer {
+        
+    }
+    
+    footer nav {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 25px;
+    }
+    
+    ul.left-nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-bottom:15px;
+    }
+    
+    ul.right-nav {
+        display: flex;
+        padding-right: 0;
+        width: 100%;
+        justify-content: space-around
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
